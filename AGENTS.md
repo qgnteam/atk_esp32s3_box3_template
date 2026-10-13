@@ -27,7 +27,7 @@
 
 ## C Coding Guidelines
 
-See [.clang-format](../.clang-format) for automatic formatting rules. This document lists only additional conventions that require manual compliance.
+See [.clang-format](.clang-format) for automatic formatting rules. This document lists only additional conventions that require manual compliance.
 
 ### Files and Organization
 - Use UTF-8 for source code. Use lowercase file and directory names, preferably separating words with underscores. Names should describe their purpose.
@@ -47,6 +47,11 @@ See [.clang-format](../.clang-format) for automatic formatting rules. This docum
 
 ### Comments
 - Meaningful comment lines must account for at least 30% of all code lines. Blank lines, empty comments, and unfilled template lines do not count as meaningful comments. Chinese comments are recommended.
+- Use `//` for single-line comments.
+- Add comments to generated code for each functional block.
+- Comment on data structures that are not self-explanatory; variables, constants, and macros with physical meaning; and complex, critical, or non-obvious implementations. Describe the meaning and units of physical quantities.
+- When modifying code, explain how and why it was changed. Keep only the latest modification note at each location. Use `TODO` for temporary code or code that needs further work.
+
 - At the beginning of each file, document the file name, person responsible, creation date, purpose, change log, copyright, and legal information. Enter “None” where no applicable information is available.
   ```c
   /**
@@ -69,9 +74,6 @@ See [.clang-format](../.clang-format) for automatic formatting rules. This docum
      * @note (Optional) Additional notes
      */
     ```
-- Comment on data structures that are not self-explanatory; variables, constants, and macros with physical meaning; and complex, critical, or non-obvious implementations. Describe the meaning and units of physical quantities.
-- When modifying code, explain how and why it was changed. Keep only the latest modification note at each location. Use `TODO` for temporary code or code that needs further work.
-- Add comments to generated code for each functional block.
 
 ### Macros, Variables, and Expressions
 - Fully parenthesize each parameter and the entire expression in expression macros. Enclose multi-statement macros in braces; `do { ... } while (0)` is recommended.
