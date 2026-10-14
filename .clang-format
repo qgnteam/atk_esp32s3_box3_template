@@ -21,8 +21,8 @@ UseTab: Never
 # 预处理指令不缩进，即使位于嵌套的条件编译块中。
 IndentPPDirectives: None
 
-# case、default 标签与 switch 对齐，不额外缩进。
-IndentCaseLabels: false
+# case、default 在 switch 后要缩进。
+IndentCaseLabels: true
 
 # 目标行宽为 80 列；无法拆分的内容可能超过此限制。
 ColumnLimit: 80
